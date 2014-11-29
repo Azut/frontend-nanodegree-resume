@@ -26,10 +26,32 @@ var skills = ["awesomeness","programming","teaching","JS"];
 var bio = {
 	"name" : "Fernando",
 	"role" : "Support Technicien EMEA",
-	"eamil" : "framos.miracle@gmail.com",
-	"phone" : "+34 618 174 320",
-	"photo" : "https://lh6.googleusercontent.com/-zN59jZi-rSI/VHm5bDFqWmI/AAAAAAAAB-k/voNVbSUYWbg/w268-h362-no/IMG_0022.JPG",
-	"welcome" : "Welcome to my CV!"
+	"contacts" : {
+		"email" : "framos.miracle@gmail.com",
+		"mobile" : "+34 618 174 320",
+		"github" : "Azut",
+		"location" : "Madrid"
+	},
+
+	"welcomeMessage" : "Welcome to my CV!",
+	"skills" : [
+		"Awesomeness", "programming", "teaching", "JS"
+	],
+	"bioPic" : "Users/FernandoR/Pictures/Chibi_Lich_King.png",
 };
 
-$("#main").append(bio.name);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
+var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%",bio.welcomeMessage);
+var formattedSkills = HTMLskills.replace("%data%",bio.skills);
+
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
+$("#header").append(formattedMobile);
+$("#header").append(formattedEmail);
+$("#header").append(formattedSkills);
+$("#header").append(formattedWelcomeMsg);
