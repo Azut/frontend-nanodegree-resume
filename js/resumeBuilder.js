@@ -25,8 +25,11 @@ var skills = ["awesomeness","programming","teaching","JS"];
 
 var bio = {
 	"name" : "Fernando",
-	"age" : 33,
-	"skills" : skills
+	"role" : "Support Technicien EMEA",
+	"eamil" : "framos.miracle@gmail.com",
+	"phone" : "+34 618 174 320",
+	"photo" : "https://lh6.googleusercontent.com/-zN59jZi-rSI/VHm5bDFqWmI/AAAAAAAAB-k/voNVbSUYWbg/w268-h362-no/IMG_0022.JPG",
+	"welcome" : "Welcome to my CV!"
 };
 
 $("#main").append(bio.name);
